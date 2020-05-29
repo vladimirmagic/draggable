@@ -52,6 +52,7 @@ export const defaultOptions = {
   placedTimeout: 800,
   plugins: [],
   sensors: [],
+  removeOriginalSource: true
 };
 
 /**
@@ -532,7 +533,9 @@ export default class Draggable {
 
     this.trigger(dragStopEvent);
 
-    // this.source.parentNode.insertBefore(this.originalSource, this.source); // as we are using React, we don't need this
+    if (this.options.removeOriginalSource) {
+      this.source.parentNode.insertBefore(this.originalSource, this.source);
+    }
     this.source.parentNode.removeChild(this.source);
     this.originalSource.style.display = '';
 
