@@ -52,7 +52,7 @@ export const defaultOptions = {
   placedTimeout: 800,
   plugins: [],
   sensors: [],
-  removeOriginalSource: true
+  keepOriginalSource: false,
 };
 
 /**
@@ -533,7 +533,7 @@ export default class Draggable {
 
     this.trigger(dragStopEvent);
 
-    if (this.options.removeOriginalSource) {
+    if (!this.options.keepOriginalSource) {
       this.source.parentNode.insertBefore(this.originalSource, this.source);
     }
     this.source.parentNode.removeChild(this.source);

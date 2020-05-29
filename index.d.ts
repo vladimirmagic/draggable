@@ -110,6 +110,7 @@ declare module '@shopify/draggable' {
         mirror?: MirrorOptions;
         scrollable?: ScrollableOptions;
         swapAnimation?: SwapAnimationOptions;
+        keepOriginalSource?: boolean;
     }
 
     export class Draggable<EventListType extends string = DraggableEventNames | MirrorEventNames> {
