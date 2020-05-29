@@ -532,7 +532,7 @@ export default class Draggable {
 
     this.trigger(dragStopEvent);
 
-    // this.source.parentNode.insertBefore(this.originalSource, this.source); // as we are
+    // this.source.parentNode.insertBefore(this.originalSource, this.source); // as we are using React, we don't need this
     this.source.parentNode.removeChild(this.source);
     this.originalSource.style.display = '';
 
