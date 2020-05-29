@@ -52,7 +52,7 @@ export const defaultOptions = {
   placedTimeout: 800,
   plugins: [],
   sensors: [],
-  keepOriginalSource: false,
+  keepOriginalSource: true,
 };
 
 /**
